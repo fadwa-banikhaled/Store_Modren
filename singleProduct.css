@@ -1,0 +1,211 @@
+ /*=============== SingleProduct PAGE ===============*/
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background: #C1908B;
+  }
+  .product_header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em;
+      color: #fff;
+      position: fixed;
+      top: 0;
+      height: 80px;
+      width: 100%;
+      z-index: 9999;
+}
+section {
+  margin-top: 60px; 
+  margin-bottom:200px;
+}
+
+  .container {
+    max-width: 95%;
+    margin: auto;
+    height: auto;
+    margin-top: 5%;
+    background: white;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .left, .right {
+    width: 50%;
+    padding: 30px;
+    height: fit-content;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .flex1 {
+    display: flex;
+  }
+  
+  .main_image {
+    width: auto;
+    height: auto;
+  }
+  .slide{
+    width: 100%;
+  }
+  
+  .option img {
+    width: 75px;
+    height: 75px;
+    padding: 10px;
+  }
+  
+  .right {
+    padding: 50px 100px 50px 50px;
+  }
+  
+  h3 {
+    color: #af827d;
+    margin: 20px 0 20px 0;
+    font-size: 25px;
+  }
+  
+  h5,
+  p,
+  small {
+    color: #837D7C;
+  }
+  
+  h4 {
+    color: red;
+  }
+  
+  p {
+    margin: 20px 0 50px 0;
+    line-height: 25px;
+  }
+  
+  h5 {
+    font-size: 15px;
+  }
+  
+  label,
+  .add span,
+  .color span {
+    width: 25px;
+    height: 25px;
+    background: #000;
+    border-radius: 50%;
+    margin: 20px 10px 20px 0;
+  }
+  
+  .color span:nth-child(2) {
+    background: #EDEDED;
+  }
+  
+  .color span:nth-child(3) {
+    background: #D5D6D8;
+  }
+  
+  .color span:nth-child(4) {
+    background: #EFE0DE;
+  }
+  
+  .color span:nth-child(5) {
+    background: #AB8ED1;
+  }
+  
+  .color span:nth-child(6) {
+    background: #F04D44;
+  }
+  
+  .add label,
+  .add span {
+    background: none;
+    border: 1px solid #C1908B;
+    color: #C1908B;
+    text-align: center;
+    line-height: 25px;
+  }
+  
+  .add label {
+    padding: 10px 30px 0 20px;
+    border-radius: 50px;
+    line-height: 0;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #C1908B;
+    color: white;
+    margin-top: 20%;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width:768px) {
+    .container {
+      max-width: 90%;
+      margin: auto;
+      height: auto;
+    }
+  
+    .left, .right {
+      width: 100%;
+    }
+  
+    .container {
+      flex-direction: column;
+    }
+    .slide{
+      width: 100%;
+    }
+
+  }
+  
+  @media only screen and (max-width:511px) {
+    .container {
+      max-width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .left, .right {
+      padding: 0;
+    }
+  .slide{
+    width: 100%;
+  }
+  }
+
+  /*-----------Measurement----------*/
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.measurement {
+    width: 100%;
+}
+
+.measurement input[type="text"] {
+    width: 48%; /* Makes each input take up just under half the form's width */
+    margin-bottom: 1em; /* Gives space between rows of inputs */
+    padding: 10px; /* Padding inside each input field */
+    border: 1px solid #C1908B; /* A simple light border around the input */
+    border-radius: 4px; /* Rounded corners on the inputs */
+    font-size: 16px; /* Slightly larger text */
+}
+
+.measurement input[type="text"] {
+  box-sizing: border-box;
+  color: #C1908B;
+}

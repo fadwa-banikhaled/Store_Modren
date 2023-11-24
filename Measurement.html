@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!--=============== FAVICON ===============-->
+
+     <!--=============== REMIXICONS ===============-->
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!---------------------- CSS---------------------->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="singleProduct.css">
+    
+    <title>Store</title>
+</head>
+<body>
+
+    <!--Navbar-->
+    <header class="product_header">
+        <div class="header_content">
+            <div class="left_header_content">
+                <a href="shop.html" class="back-button">
+                    <i class="ri-arrow-left-s-line"></i>
+                </a>
+                <h1>Store</h1>
+            </div>
+           
+            <!--Cart Icon-->
+            <div class="right_header_content">
+                <i class="ri-shopping-bag-line" id="cart-icon" data-quantity="0"></i>
+            </div>
+        </div>
+      
+      
+       <!--Cart-->
+       <div class="overlay"></div>
+       <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+      
+        <!--Content-->
+        <div class="cart-content">
+            <div class="cart-box">
+                
+            </div>
+        </div>
+      
+        <!--Total-->
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+        </div>
+        <a href="shop.html">
+        <button type="button" class="btn-buy">Back To Shop</button>
+         </a>
+        <!--Close cart-->
+        <i class="ri-close-line" id="close-cart"></i>
+       </div>
+      
+      </header>
+
+    <section>
+        <div class="container flex">
+          <div class="left">
+            <div class="main_image">
+              <img src="./img/measur_chart.png" alt="" class="slide">
+            </div>
+          </div>
+
+          <div class="right">
+            <h3 id="product-title">Your Measurement</h3>
+            <h4 id="product-price">Down Here</h4>
+            <p>for more accuarcy in Your design fill the fields 👇</p>
+            <div class="form">
+                <form id="measurementForm" action="" class="measurement">
+                    <input type="text" placeholder="1.NECK" class="inputField" required>
+                    <input type="text" placeholder="2.OVER BUST" class="inputField">
+                    <input type="text" placeholder="3.BUST" class="inputField">
+                    <input type="text" placeholder="4.UNDER BUST" class="inputField">
+                    <input type="text" placeholder="5.WAIST" class="inputField">
+                    <input type="text" placeholder="6.HIPS" class="inputField">
+                    <input type="text" placeholder="7.NECK TO HEEL" class="inputField">
+                    <input type="text" placeholder="8.NECK TO ABOVE KNEE" class="inputField">
+                    <input type="text" placeholder="9.ABOVE KNEE TO ANKLE" class="inputField">
+                    <input type="text" placeholder="10.ARM LENGTH" class="inputField">
+                    <input type="text" placeholder="11.SHOULDER SEAM" class="inputField">
+                    <input type="text" placeholder="12.ARM HOLE" class="inputField">
+                    <input type="text" placeholder="13.BICEP" class="inputField">
+                    <input type="text" placeholder="14.FORE ARM" class="inputField">
+                    <input type="text" placeholder="15.WRIST" class="inputField">
+                    <input type="text" placeholder="16.V NECK CUT" class="inputField">
+                    <input type="text" placeholder="17.SHOULDER TO WAIST" class="inputField">
+                    <input type="text" placeholder="18.WAIST TO ABOVE KNEE" class="inputField">
+
+                </form>
+            </div>          
+    
+            <button id="submitButton" class="checkOut" disabled>Check Out</button>
+          </div>
+        </div>
+      </section>
+      <!--==================== Footer ====================-->
+      <footer>
+        <div class="footer-content">
+          <div class="footer-brand-social">
+            <div class="footer-brand">
+              Store
+            </div>
+      
+            <div class="social-icons">
+                <div class="nav-item">
+                    <a href="#"><i class="ri-facebook-box-line"></i></a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="#"><i class="ri-youtube-line"></i></a>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="footer-links">       
+            <div class="nav-item">
+                <a href="about.html">About</a>
+              </div>
+              <div class="nav-item">
+                <a href="contact.html">Contact</a>
+              </div>
+          </div>
+          
+          <div class="copyright">
+            &copy; 2023 store. All rights reserved.
+          </div>
+        </div>
+      </footer>  
+    
+       <!--==================== Scripts ====================-->
+       <script src="main.js"></script>    
+      
+    </body>
+    </html>

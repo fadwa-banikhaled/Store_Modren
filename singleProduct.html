@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!--=============== FAVICON ===============-->
+     
+
+     <!--=============== REMIXICONS ===============-->
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!---------------------- CSS---------------------->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="singleProduct.css">
+    
+    <title>Store</title>
+</head>
+<body>
+
+    <!--Navbar-->
+ <header class="product_header">
+  <div class="header_content">
+      <div class="left_header_content">
+          <a href="shop.html" class="back-button">
+              <i class="ri-arrow-left-s-line"></i>
+          </a>
+          <h1>Store</h1>
+      </div>
+     
+      <!--Cart Icon-->
+      <div class="right_header_content">
+          <i class="ri-shopping-bag-line" id="cart-icon" data-quantity="0"></i>
+      </div>
+  </div>
+
+
+ <!--Cart-->
+ <div class="overlay"></div>
+ <div class="cart">
+  <h2 class="cart-title">Your Cart</h2>
+
+  <!--Content-->
+  <div class="cart-content">
+      <div class="cart-box">
+          
+      </div>
+  </div>
+
+  <!--Total-->
+  <div class="total">
+      <div class="total-title">Total</div>
+      <div class="total-price">$0</div>
+  </div>
+  <button type="button" class="btn-buy">Pay Now</button>
+
+  <!--Close cart-->
+  <i class="ri-close-line" id="close-cart"></i>
+ </div>
+
+</header>
+
+    <section>
+        <div class="container flex">
+          <div class="left">
+            <div class="main_image">
+              <img src="./img/img1-removebg-preview.png" class="slide">
+            </div>
+            <div class="option flex">
+              <img src="./img/img1-removebg-preview.png" onclick="img('./img/img1-removebg-preview.png')">
+              <img src="./img/img2-removebg-preview.png" onclick="img('./img/img2-removebg-preview.png')">
+              <img src="./img/img3-removebg-preview.png"onclick="img('./img/img3-removebg-preview.png')">
+              <img src="./img/img4-removebg-preview.png" onclick="img('./img/img4-removebg-preview.png')">
+              <img src="./img/img5-removebg-preview.png" onclick="img('./img/img5-removebg-preview.png')">
+              <img src="./img/img6-removebg-preview.png" onclick="img('./img/img6-removebg-preview.png')">
+            </div>
+          </div>
+          <div class="right">
+            <h3 id="product-title">Beats Solo3 Wireless</h3>
+            <h4 id="product-price"><small>$</small>999.99 </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <h5>Color-Rose Gold</h5>
+            <div class="color flex1">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <h5>Number</h5>
+            <div class="add flex1">
+              <span>-</span>
+              <label>1</label>
+              <span>+</span>
+            </div>
+    
+            <button id="add-to-bag">Add to Bag</button>
+          </div>
+        </div>
+      </section>
+      <!--==================== Footer ====================-->
+      <footer>
+        <div class="footer-content">
+          <div class="footer-brand-social">
+            <div class="footer-brand">
+              Store
+            </div>
+      
+            <div class="social-icons">
+                <div class="nav-item">
+                    <a href="#"><i class="ri-facebook-box-line"></i></a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                  </div>
+                  <div class="nav-item">
+                    <a href="#"><i class="ri-youtube-line"></i></a>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="footer-links">       
+            <div class="nav-item">
+                <a href="about.html">About</a>
+              </div>
+              <div class="nav-item">
+                <a href="contact.html">Contact</a>
+              </div>
+          </div>
+          
+          <div class="copyright">
+            &copy; 2023 store. All rights reserved.
+          </div>
+        </div>
+      </footer>  
+    
+       <!--==================== Scripts ====================-->
+       <script src="main.js"></script>
+      <script>
+        function img(anything) {
+          document.querySelector('.slide').src = anything;
+        }
+    
+        function change(change) {
+          const line = document.querySelector('.home');
+          line.style.background = change;
+        }
+        </script>
+
+      <script>
+    /////////Add To Cart Button in SingleProduct Page
+    document.getElementById('add-to-bag').addEventListener('click', function() {
+   var title = document.getElementById('product-title').innerText;
+   var price = document.getElementById('product-price').innerText;
+   var productImg = document.querySelector('.option img').src;
+   addProductToCart(title, price, productImg);
+   updateTotal();
+   saveCartItems();
+   updateCartIcon();
+});
+      
+            /////////Open Measurement page
+  document.querySelector('.btn-buy').addEventListener('click', function() {
+   window.location.href = 'Measurement.html';
+});
+        </script>
+      
+    </body>
+    </html>
